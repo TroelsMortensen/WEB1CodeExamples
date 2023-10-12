@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Table 3</title>
+    <style>
+        table {
+            border-top: double 3px black;
+            border-collapse: collapse;
+        }
+        td table {
+            border: none;
+        }
+
+        td {
+            border: 3px solid blue;
+            text-align: center;
+            width: 25px;
+            height: 25px;
+        }
+        td table tr td {
+            border: 3px solid grey;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <table>
+            <tr>
+                <th>1</th>
+                <th>2</th>
+                <th>3</th>
+            </tr>
+            <tr>
+                <td>a</td>
+                <td>
+                    <table>
+                        <tr>
+                            <td style="background-color: red;">k</td>
+                            <td style="background-color: yellow;">l</td>
+                        </tr>
+                        <tr>
+                            <td style="background-color: green;">m</td>
+                            <td style="background-color: blue;">n</td>
+                        </tr>
+                    </table>
+                </td>
+                <td>c</td>
+            </tr>
+            <tr>
+                <td>x</td>
+                <td>y</td>
+                <td>z</td>
+            </tr>
+
+        </table>
+    </div>
+</body>

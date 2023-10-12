@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Table 2</title>
+    <style>
+        table {
+            border: solid 1px black;
+            border-collapse: collapse;
+        }
+
+        tr,
+        th,
+        td {
+            padding: 5px;
+        }
+
+        tr{
+            border: solid 1px black;
+        }
+
+        th{
+            background-color: cadetblue;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div>
+        <table>
+            <tr>
+                <th>1</th>
+                <th>2</th>
+                <th>3</th>
+                <th>4</th>
+            </tr>
+            <tr>
+                <td>a</td>
+                <td colspan="2" style="text-align: center; background-color: chocolate;">b</td>
+                <td rowspan="2" style="background-color: lightcoral;">c</td>
+            </tr>
+            <tr>
+                <td style="font-style: italic;">x</td>
+                <td>y</td>
+                <td>z</td>
+            </tr>
+        </table>
+    </div>
+</body>

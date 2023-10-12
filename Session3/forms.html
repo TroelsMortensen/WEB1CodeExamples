@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Forms example</title>
+</head>
+
+<body>
+    <div>
+        <form action="http://www.example.com/subscribe.php" method="get" name="NameForm" id="NameForm">
+            <label for="InputName">Name:</label>
+            <input type="text" name="InputName" /> <br />
+            <fieldset>
+                <legend>Customer Information</legend>
+                <label>Name: <input type="text" name="CName" id="CName">
+                </label><br><br>
+                <label>Email:
+                    <input type="text" name="CEmail" id="CEmail">
+                </label>
+            </fieldset>
+
+
+            <input type="submit" value="Send info" />
+        </form>
+    </div>
+</body>

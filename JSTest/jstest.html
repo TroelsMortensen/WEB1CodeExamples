@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>My Website</title>
+    <script src="jquery-3.7.0.js"></script>
+
+</head>
+
+<body>
+    <div id="wrapper">
+        <h3>hello</h3>
+    </div>
+    <script>
+        var fetchedXML = '<list><todo><id>1</id><title>Mow lawn</title><description>Must be done today</description><isCompleted>false</isCompleted><assigneeName>Troels</assigneeName></todo><todo><id>2</id><title>Do dishes</title><description>It&apos;s a huge mess in the kitchen</description><isCompleted>false</isCompleted><assigneeName>Anne</assigneeName></todo><todo><id>3</id><title>Walk dog</title><description>He gotta get sniffin&apos; stuff</description><isCompleted>false</isCompleted><assigneeName>Troels</assigneeName></todo><todo><id>4</id><title>Brush teeth</title><description>Pearly whites</description><isCompleted>true</isCompleted><assigneeName>Troels</assigneeName></todo></list>';
+
+        var parser = new DOMParser();
+        var xmlDoc = parser.parseFromString(fetchedXML, "text/xml");
+        var todoTags = xmlDoc.getElementsByTagName("todo");
+
+        document.write('<h3>' + todoTags.length + '</h3>');
+        var resultTableHTML = '<table>';
+        {
+            resultTableHTML += '<tr><th>id</th><th>title</th><th>description</th><th>status</th><th>assignee</th></tr>';
+            for (let i = 0; i < todoTags.length; i++) {
+                resultTableHTML += '<tr>';
+                let id = todoTags[i].getElementsByTagName("id")[0].innerHTML;
+                let title = todoTags[i].getElementsByTagName("title")[0].innerHTML;
+                let description = todoTags[i].getElementsByTagName("description")[0].innerHTML;
+                let status = todoTags[i].getElementsByTagName("isCompleted")[0].innerHTML;
+                let assignee = todoTags[i].getElementsByTagName("assigneeName")[0].innerHTML;
+                resultTableHTML += '<td>' + id + '</td>';
+                resultTableHTML += '<td>' + title + '</td>';
+                resultTableHTML += '<td>' + description + '</td>';
+                resultTableHTML += '<td>' + status + '</td>';
+                resultTableHTML += '<td>' + assignee + '</td>';
+                resultTableHTML += '</tr>';
+            }
+        }
+        resultTableHTML += '</table>';
+        document.write(resultTableHTML);
+    </script>
+</body>
