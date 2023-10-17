@@ -1,0 +1,33 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="id"></p>
+    <button type="button" onclick="stopClocker()">Click to stop</button>
+    <script>
+        var value = 0;
+        var intervalJob = null;
+
+        clocker(500, 1, document.getElementById("id"));
+
+        function clocker(interval, increment, element) {
+            intervalJob = setInterval(function () {
+                element.innerHTML = value;
+                value += increment;
+            }, interval)
+        }
+
+        function stopClocker() {
+            clearInterval(intervalJob);
+            alert("Interval stopped");
+        }
+
+    </script>
+</body>
+
+</html>

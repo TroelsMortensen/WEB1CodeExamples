@@ -1,0 +1,27 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p></p>
+    <div></div>
+
+    <script>
+        const pTags = document.getElementsByTagName("p");
+
+        addMessageToTag(pTags[0], "Hello World");
+
+        const divTags = document.getElementsByTagName("div");
+        
+        addMessageToTag(divTags[0], "Hello Moon");
+        function addMessageToTag(tag, message) {
+            tag.innerHTML = message;
+        }
+    </script>
+</body>
+
+</html>

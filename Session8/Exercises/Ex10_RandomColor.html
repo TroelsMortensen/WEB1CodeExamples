@@ -1,0 +1,27 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="id">
+
+    </p>
+    <script>
+        const colours = ["blue", "red", "green", "orange", "yellow"];
+        const randomlyGeneratedNumber = getRandomInt(5);
+        const randomlySelectedColour = colours[randomlyGeneratedNumber];
+        const pTag = document.getElementById("id");
+        pTag.innerHTML = randomlySelectedColour;
+
+
+        function getRandomInt(max) {
+            return Math.floor(Math.random() * max);
+        }
+    </script>
+</body>
+
+</html>

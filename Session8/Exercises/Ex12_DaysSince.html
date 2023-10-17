@@ -1,0 +1,41 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul>
+        <li></li>
+        <li></li>
+    </ul>
+    <script>
+        const currentDate = new Date();
+        const fixedDate = new Date(2018, 0, 1);
+        const dateDifferenceInMs = currentDate - fixedDate;
+        const dateDiffInDays = Math.floor(dateDifferenceInMs / (1000 * 60 * 60 * 24));
+
+        const liTags = document.getElementsByTagName("li");
+        const formatted = formatDateToDanish(currentDate);
+
+        liTags[0].innerHTML = "Current date: " + formatted;
+        liTags[1].innerHTML = "Days since 1/1/2018: " + dateDiffInDays;
+
+        function formatDateToDanish(date) {
+            return date.getDay() + "/" + date.getMonth() + "/" + date.getFullYear();
+        }
+
+        const ulTag = document.getElementsByTagName("ul");
+        let evenOrOddMsg = "";
+        if (dateDiffInDays % 2 == 0) {
+            evenOrOddMsg = "Even number of days";
+        } else {
+            evenOrOddMsg = "Odd number of days";
+        }
+        ulTag[0].innerHTML = ulTag[0].innerHTML + "<li>" + evenOrOddMsg + "</li>"
+    </script>
+</body>
+
+</html>

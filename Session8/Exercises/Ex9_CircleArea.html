@@ -1,0 +1,26 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ol>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ol>
+    <script>
+        function circleArea(radius){
+            return Math.PI * radius * radius;
+        }
+
+        const liTags = document.getElementsByTagName("li");
+        liTags[0].innerHTML = circleArea(1);
+        liTags[1].innerHTML = circleArea(2);
+        liTags[2].innerHTML = circleArea(3);
+        liTags[3].innerHTML = circleArea(4);
+    </script>
+</body>
+</html>
