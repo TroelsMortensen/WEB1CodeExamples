@@ -1,0 +1,19 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="animals">
+        name name name
+    </p>
+
+    <script>
+        const animals = ["Cat", "Dog", "Parrot"];
+        const pTag = document.getElementById("animals");
+        const replacementText = animals[0] + " " + animals[1] + " " + animals[2]; 
+        pTag.innerHTML = replacementText;
+    </script>
+</body>
+</html>
