@@ -1,0 +1,33 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var variableOne = 1;
+        variableOne = 2;
+        let variableThree = 3;
+        myFunction(10);
+
+        function myFunction(arg) {
+            var variableFour = 4;
+            variableFive = 5;
+            {
+                var variableSix = 6;
+                let variableSeven = 7;
+            }
+            console.log("1:", variableOne);     // 2
+            console.log("3:", variableThree);   // 3
+            console.log("4:", variableFour);    // 4
+            console.log("5:", variableFive);    // 5
+            console.log("6:", variableSix);     // 6
+            console.log("7:", variableSeven);   // undefined
+        }
+    </script>
+</body>
+
+</html>
