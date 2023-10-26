@@ -1,0 +1,39 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="labelId">
+        This is a Label!
+    </div>
+    <div>
+        <ul>
+            <li>hej</li>
+            <li class="myClass">hej1</li>
+            <li class="myClass">hej2</li>
+            <li>hej3</li>
+        </ul>
+    </div>
+    <script>
+        // let divElement = document.getElementById("labelId");
+        // const myList = ["hello", "There", "how are you"];
+        // let result = "<ul>";
+        //     for (let index = 0; index < myList.length; index++) {
+        //         const element = myList[index];
+        //         result += "<li>" + element + "</li>"
+        //     }
+        // result += "</ul>"
+        // divElement.innerHTML = result;
+        const lis = document.getElementsByClassName("myClass");
+        for (let index = 0; index < lis.length; index++) {
+            const element = lis[index];
+            element.innerHTML = "<b>" + element.innerHTML + "</b>"
+        }
+    </script>
+</body>
+
+</html>
