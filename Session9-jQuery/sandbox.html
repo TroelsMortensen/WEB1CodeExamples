@@ -1,0 +1,51 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div id="firstDiv">
+        <ol>
+            <li>item -2</li>
+            <li>item -1</li>
+            <li>item 0</li>
+        </ol>
+    </div>
+    <div id="secondDiv">
+        <ol>
+            <li>item 1</li>
+            <li>item 2</li>
+            <li>item 3</li>
+        </ol>
+        <ol>
+            <li>item 4</li>
+            <li>item 5</li>
+            <li>item 6</li>
+        </ol>
+    </div>
+
+    <script>
+        // $("#secondDiv")
+        //     .find("ol:nth-child(2)")
+        //     .find("li:nth-child(odd)")
+        //     .html(function (i, origText) {
+        //         return "<b>" + origText + "</b>";
+        //     });
+        // $("#secondDiv ol:nth-child(2) li:nth-child(odd)")
+        //     .html(function (i, origText) {
+        //         return "<b>" + origText + "</b>";
+        //     });
+        $(document).on("resize", function () {
+            console.log("Hello");
+        });
+        $(document).on("scroll", function () {
+            console.log("Hello");
+        });
+    </script>
+</body>
+
+</html>

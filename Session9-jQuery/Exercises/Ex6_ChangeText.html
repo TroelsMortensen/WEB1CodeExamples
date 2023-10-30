@@ -1,0 +1,20 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <p>Create an event listener so when you click the button here it changes its text.</p>
+    <button id="buttonId">Click me</button>
+    <script>
+        $("#buttonId").click((evt) => {
+            $("p").html("Text is now changed");
+        });
+    </script>
+</body>
+
+</html>

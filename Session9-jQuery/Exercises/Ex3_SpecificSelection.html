@@ -1,0 +1,30 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+    <div>
+        <ol id="first">
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+        </ol>
+        <ol id="second">
+            <li>Item 4</li>
+            <li>Item 5</li>
+            <li>Item 6</li>
+        </ol>
+    </div>
+
+    <script>
+        $("#second li:nth-child(odd)").wrap("<b>");
+    </script>
+</body>
+
+</html>

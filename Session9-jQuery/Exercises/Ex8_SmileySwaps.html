@@ -1,0 +1,23 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <div>
+        <img id="glad" src="images/glad.jpg"/>
+        <img id="sad" style="display: none;" src="images/sad.jpg"/>
+    </div>
+    <script>
+        let showGlad = true;
+
+        $("img").click((evt) => {
+            showGlad = !showGlad;
+            $("#glad").css("display", showGlad ? "inline": "none");
+            $("#sad").css("display", showGlad ? "none": "inline");
+        });
+    </script>
+</body>
+</html>
