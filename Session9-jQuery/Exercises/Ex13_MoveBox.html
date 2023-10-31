@@ -1,0 +1,39 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div style="border: 1px solid black; height: 500px; width: 500px;">
+        <div id="boxId" style="position:absolute; 
+        width: 100px; 
+        height: 100px; 
+        background-color: red;">
+        </div>
+    </div>
+    <script>
+        $(document).on("keypress", (evt) => {
+            const position = $("#boxId").position();
+            console.log(evt.which);
+            if (evt.which == 97) { // left
+                $("#boxId").animate({ left: (position.left - 50) });
+            }
+            if (evt.which == 119) { // up
+                $("#boxId").animate({ top: (position.top - 50) });
+            }
+            if (evt.which == 100) { // right
+                console.log("moving right");
+                $("#boxId").animate({ left: (position.left + 50) });
+            }
+            if (evt.which == 115) { // down
+                $("#boxId").animate({ top: (position.top + 50) });
+            }
+        });
+    </script>
+</body>
+
+</html>

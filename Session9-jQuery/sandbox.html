@@ -28,7 +28,17 @@
         </ol>
     </div>
 
+    <div id="boxId" style="position:relative; width: 100px; height: 100px; background-color: red;"></div>
     <script>
+        $("#boxId").animate({left: 200});
+        // .animate({…}, speed, easing, callback)
+        // $("#boxId").animate(
+        //     { height: 150, width: 150 },
+        //     "slow",
+        //     "linear",
+        //     () => {
+        //         console.log("now done!");
+        //     });
         // $("#secondDiv")
         //     .find("ol:nth-child(2)")
         //     .find("li:nth-child(odd)")

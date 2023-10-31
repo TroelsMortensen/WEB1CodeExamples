@@ -1,0 +1,92 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+        .boxcontainer,
+        button {
+            width: 100px;
+            height: 100px;
+            display: inline-block;
+            margin-top: 100px;
+            margin-left: 100px;
+        }
+
+        #redbox,
+        #bluebox,
+        #greenbox {
+            width: 100px;
+            height: 100px;
+        }
+
+        #redbox {
+            background-color: red;
+        }
+
+        #bluebox {
+            background-color: blue;
+        }
+
+        #greenbox {
+            background-color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="boxes">
+        <div class="boxcontainer">
+            <div id="redbox"></div>
+        </div>
+        <div class="boxcontainer">
+            <div id="bluebox"></div>
+        </div>
+        <div class="boxcontainer">
+            <div id="greenbox"></div>
+        </div>
+    </div>
+    <div>
+        <button id="redbutton">Red</button>
+        <button id="bluebutton">Blue</button>
+        <button id="greenbutton">Green</button>
+    </div>
+    <div>
+        <button id="toggler">Toggle</button>
+    </div>
+    <script>
+        $("#redbox").click((evt) => {
+            $(evt.target).hide();
+        });
+
+        $("#bluebox").click((evt) => {
+            $(evt.target).fadeOut();
+        });
+
+        $("#greenbox").click((evt) => {
+            $(evt.target).slideUp();
+        });
+
+        $("#redbutton").click((evt) => {
+            $("#redbox").show();
+        });
+
+        $("#bluebutton").click((evt) => {
+            $("#bluebox").fadeIn();
+        });
+
+        $("#greenbutton").click((evt) => {
+            $("#greenbox").slideDown();
+        });
+
+        $("#toggler").click((evt)=> {
+            $("#redbox").toggle();
+            $("#bluebox").fadeToggle();
+            $("#greenbox").slideToggle();
+        });
+    </script>
+</body>
+
+</html>

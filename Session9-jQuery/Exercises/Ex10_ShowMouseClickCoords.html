@@ -1,0 +1,21 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+<p>
+    Coords: (<span id="xCoord">0</span>, <span id="yCoord">0</span>).
+</p>
+    <script>
+        // $(document).click((evt)=> {   <--- use this instead, for handling click events.
+        $(document).hover((evt)=> {
+            console.log("click");
+            $("#xCoord").text(evt.pageX);
+            $("#yCoord").text(evt.pageY);
+        });
+    </script>
+</body>
+</html>

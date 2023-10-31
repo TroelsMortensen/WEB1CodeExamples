@@ -1,0 +1,31 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <p>This is value here <span id="valueId">0</span> is very important.</p>
+    <button id="incButton">Increment</button>
+    <button id="decButton">Decrement</button>
+
+    <script>
+        $("#incButton").click((evt)=> {
+            let valueAsInt = getValueAsInt();
+            $("#valueId").text(++valueAsInt);
+        });
+        $("#decButton").click((evt)=> {
+        
+            let valueAsInt = getValueAsInt();
+            $("#valueId").text(valueAsInt);
+        });
+
+        function getValueAsInt(){
+            let currentValueAsString = $("#valueId").text();
+            let valueAsInt = parseInt(currentValueAsString);
+            return valueAsInt;
+        }
+    </script>
+</body>
+</html>
