@@ -1,0 +1,35 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div style="border: 1px solid black; height: 500px; width: 500px;">
+        <div id="boxId" style="position:relative; 
+        width: 100px; 
+        height: 100px; 
+        background-color: red;">
+        </div>
+    </div>
+    <script>
+        function moveRight() {
+            $("#boxId").animate({ left: 400 }, "slow", moveDown);
+        }
+        function moveDown() {
+            $("#boxId").animate({ top: 400 }, "slow", moveLeft);
+        }
+        function moveLeft() {
+            $("#boxId").animate({ left: 0 }, "slow", moveUp);
+        }
+        function moveUp() {
+            $("#boxId").animate({ top: 0 }, "slow", moveRight);
+        }
+        moveRight();
+    </script>
+</body>
+
+</html>

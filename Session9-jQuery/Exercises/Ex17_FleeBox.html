@@ -1,0 +1,41 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div style="border: 2px solid red;
+        position: absolute;
+        top: 0px;
+        bottom: 0px;
+        left:0px;
+        right:0px;">
+        <div id="boxId" style="position:relative; 
+            width: 100px; 
+            height: 100px;
+            left: 50%;
+            top: 50%; 
+            background-color: red;
+            border-radius:50%">
+        </div>
+    </div>
+    <script>
+        $("#boxId").mouseenter((evt) => {
+            const height = $(document).height() - $("#boxId").height();
+            const width = $(document).width() - $("#boxId").width();
+            const newTop = getRandomInt(height);
+            const newLeft = getRandomInt(width);
+            $(evt.target).animate({ top: newTop, left: newLeft });
+        });
+
+        function getRandomInt(max) {
+            return Math.floor(Math.random() * max);
+        }
+    </script>
+</body>
+
+</html>

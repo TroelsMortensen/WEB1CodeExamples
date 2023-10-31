@@ -18,7 +18,6 @@
     <script>
         $(document).on("keypress", (evt) => {
             const position = $("#boxId").position();
-            console.log(evt.which);
             if (evt.which == 97) { // left
                 $("#boxId").animate({ left: (position.left - 50) });
             }
@@ -26,7 +25,6 @@
                 $("#boxId").animate({ top: (position.top - 50) });
             }
             if (evt.which == 100) { // right
-                console.log("moving right");
                 $("#boxId").animate({ left: (position.left + 50) });
             }
             if (evt.which == 115) { // down
