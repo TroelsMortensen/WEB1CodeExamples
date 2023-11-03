@@ -1,0 +1,31 @@
+[
+    {
+        "id": 1,
+        "title": "As a user I want..",
+        "status": "Started",
+        "subTasks": [
+            {
+                "description": "Do GUI",
+                "isCompleted": false,
+                "estimatedHours": 42
+            },
+            {
+                "description": "Do data access",
+                "isCompleted": true,
+                "estimatedHours": 14
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "title": "As an owner I want..",
+        "status": "Not started",
+        "subTasks": [
+            {
+                "description": "Create Owner class",
+                "isCompleted": false,
+                "estimatedHours": 3
+            }
+        ]
+    }
+]

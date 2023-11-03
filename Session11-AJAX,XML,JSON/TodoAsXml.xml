@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<todo>
+    <id>42</id>
+    <title>Mow the lawn</title>
+    <description>
+        It should be done sort of soon
+    </description>
+    <isCompleted>false</isCompleted>
+    <assignee>Troels</assignee>
+</todo>

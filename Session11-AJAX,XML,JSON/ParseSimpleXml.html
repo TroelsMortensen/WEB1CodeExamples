@@ -1,0 +1,38 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <p>
+        When this page loads, we will retrieve some text, from some file.
+        The content is placed below:
+    </p>
+    <div id="contentPlacement">
+    </div>
+    <script>
+        $.get("ExampleXml.xml", handleContent);
+
+        function handleContent(data, httpstatus) {
+            let result = "";
+            const persons = $(data).find("person");
+            const person1FirstName = $(persons[0]).find("firstname").text();
+            const person1LastName = $(persons[0]).find("lastname").text();
+            const person2FirstName = $(persons[1]).find("firstname").text();
+            const person2LastName = $(persons[1]).find("lastname").text();
+            result += "<p>";
+            result += person1FirstName + " " + person1LastName;
+            result += "</p>";
+            result += "<p>";
+            result += person2FirstName + " " + person2LastName;
+            result += "</p>";
+            $("#contentPlacement").html(result);
+        }
+    </script>
+</body>
+
+</html>

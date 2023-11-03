@@ -1,0 +1,26 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <p>
+        When this page loads, we will retrieve some text, from some file.
+        The content is placed below:
+    </p>
+    <p id="contentPlacement">
+    </p>
+    <script>
+        $.get("ExampleXml.xml", handleContent);
+
+        function handleContent(data, httpstatus) {
+            $("#contentPlacement").text("Loaded data:\n" + $(data).text());
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+    <script>
+        $.getJSON("TodoSubTask.json", handleData);
+
+        function handleData(todoList) {
+            for (const todo of todoList) {
+                const id = todo.id;
+                const title = todo.title;
+                // more fields, and do something
+
+                for (const subtask of todo.subTasks) {
+                    const description = subtask.description;
+                    const isCompleted = subtask.isCompleted;
+                    // .. etc
+                }
+            }
+        }
+
+    </script>
+</body>
+
+</html>
